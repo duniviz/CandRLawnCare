@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenScape Lawn Care - Professional Lawn Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c29 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c29" width="1200" height="600"/><path fill="%233d6622" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 320L350 340L400 325L450 345L500 330L550 350L600 335L650 355L700 340L750 360L800 345L850 365L900 350L950 370L1000 355L1050 375L1100 360L1150 380L1200 365V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #f39c12;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d5016;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #4a7c29;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about {
+            background: #f9f9f9;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2d5016;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #2d5016;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌱 GreenScape Lawn Care</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Lawn Care Services</h1>
+            <p>Transform your lawn into a beautiful outdoor space</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>✂️ Lawn Mowing</h3>
+                <p>Regular mowing services to keep your lawn perfectly trimmed and healthy. We use professional equipment for clean, precise cuts.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌿 Fertilization</h3>
+                <p>Custom fertilization programs tailored to your lawn's specific needs throughout the growing season.</p>
+            </div>
+            <div class="service-card">
+                <h3>🍂 Leaf Removal</h3>
+                <p>Complete fall cleanup services to remove leaves and debris, preparing your lawn for the winter months.</p>
+            </div>
+            <div class="service-card">
+                <h3>✨ Landscaping</h3>
+                <p>Professional landscaping design and maintenance to enhance your property's curb appeal.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌱 Weed Control</h3>
+                <p>Effective weed prevention and removal to keep your lawn looking pristine all season long.</p>
+            </div>
+            <div class="service-card">
+                <h3>💧 Irrigation</h3>
+                <p>Sprinkler system installation, maintenance, and repair to ensure your lawn gets the water it needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div>
+                <h3>Why Choose Us?</h3>
+                <p>With over 10 years of experience in lawn care, we're dedicated to providing top-quality service to every customer. Our team of certified professionals uses the latest equipment and techniques to ensure your lawn looks its absolute best.</p>
+                <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+                    <li>Licensed and Insured</li>
+                    <li>Eco-Friendly Products</li>
+                    <li>Satisfaction Guaranteed</li>
+                    <li>Competitive Pricing</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Our Commitment</h3>
+                <p>We believe in building lasting relationships with our clients through reliable service, attention to detail, and outstanding results. Your lawn is our passion, and we treat every property as if it were our own.</p>
+                <p style="margin-top: 1rem;">Contact us today to schedule a consultation and see why we're the preferred choice for lawn care in the community!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Send Message</button>
+            </form>
+            <div id="formMessage" style="margin-top: 1rem; text-align: center; display: none;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GreenScape Lawn Care. All rights reserved.</p>
+        <p>Phone: (555) 123-4567 | Email: info@greenscapelawn.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.style.display = 'block';
+            messageDiv.style.color = '#4a7c29';
+            messageDiv.textContent = 'Thank you for your message! We will contact you soon.';
+            this.reset();
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
