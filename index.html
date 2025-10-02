@@ -147,6 +147,27 @@
             font-size: 1.5rem;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
         .about {
             background: #f9f9f9;
         }
@@ -272,6 +293,25 @@
                 <h3>❄️ Snow Removal</h3>
                 <p>Reliable snow removal services to keep your property safe and accessible during winter months.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="gallery" style="background: #f9f9f9;">
+        <h2>Our Work</h2>
+        <div class="gallery">
+            <img src="IMG_1906.jpeg" alt="Lawn care work example">
+            <img src="IMG_1919.jpeg" alt="Lawn care work example">
+            <img src="IMG_1930.jpeg" alt="Lawn care work example">
+            <img src="IMG_1952.jpeg" alt="Lawn care work example">
+            <img src="IMG_1977.jpeg" alt="Lawn care work example">
+            <img src="IMG_2133.jpeg" alt="Lawn care work example">
+            <img src="IMG_2253.PNG" alt="Lawn care work example">
+            <img src="IMG_2259.PNG" alt="Lawn care work example">
+            <img src="IMG_2322.jpeg" alt="Lawn care work example">
+            <img src="IMG_2326.jpeg" alt="Lawn care work example">
+            <img src="IMG_2392.jpeg" alt="Lawn care work example">
+            <img src="IMG_2552.jpeg" alt="Lawn care work example">
+            <img src="IMG_2555.jpeg" alt="Lawn care work example">
         </div>
     </section>
 
