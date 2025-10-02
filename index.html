@@ -286,7 +286,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <div class="contact-form">
-            <form id="contactForm">
+            <form action="https://formspree.io/f/xnngvzer" method="POST">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -305,7 +305,6 @@
                 </div>
                 <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Send Message</button>
             </form>
-            <div id="formMessage" style="margin-top: 1rem; text-align: center; display: none;"></div>
             <div style="margin-top: 2rem; text-align: center;">
                 <p style="font-size: 1.2rem; color: #2d5016; font-weight: bold;">Or call us directly:</p>
                 <p style="font-size: 1.5rem; color: #4a7c29; font-weight: bold; margin-top: 0.5rem;">
@@ -322,15 +321,6 @@
     </footer>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const messageDiv = document.getElementById('formMessage');
-            messageDiv.style.display = 'block';
-            messageDiv.style.color = '#4a7c29';
-            messageDiv.textContent = 'Thank you for your message! We will contact you soon.';
-            this.reset();
-        });
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
