@@ -28,6 +28,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
             font-size: 1.1rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
@@ -46,8 +47,24 @@
             transition: background 0.3s;
         }
 
+        .call-banner-facebook {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: opacity 0.3s;
+        }
+
         .call-banner-button:hover {
             background: #6FEF00;
+        }
+
+        .call-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
 
         .floating-call {
@@ -136,7 +153,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(45, 80, 22, 0.75), rgba(45, 80, 22, 0.75)), url('./1000022256.jpg');
+            background: linear-gradient(rgba(45, 80, 22, 0.75), rgba(45, 80, 22, 0.75)), url('1000022256.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -300,8 +317,18 @@
                 gap: 0.5rem;
             }
 
+            .call-banner-left {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
             .call-banner-text {
                 font-size: 0.9rem;
+            }
+
+            .call-banner-facebook {
+                font-size: 0.85rem;
             }
 
             .call-banner-button {
@@ -349,7 +376,15 @@
 </head>
 <body>
     <div class="call-banner">
-        <div class="call-banner-text">GET STARTED TODAY</div>
+        <div class="call-banner-left">
+            <div class="call-banner-text">GET STARTED TODAY</div>
+            <a href="https://www.facebook.com/groups/615948381283791" target="_blank" class="call-banner-facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Visit us on Facebook
+            </a>
+        </div>
         <a href="tel:5157769297" class="call-banner-button">CALL (515) 776-9297</a>
     </div>
 
@@ -482,14 +517,6 @@
         <p>&copy; 2025 C&R Lawn Care. All rights reserved.</p>
         <p>Phone: (515) 776-9297 | Email: cnrlawncare13927@yahoo.com</p>
         <p>Serving Indianola and Surrounding Areas</p>
-        <p style="margin-top: 1rem;">
-            <a href="https://www.facebook.com/groups/615948381283791" target="_blank" style="color: white; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1877f2" style="vertical-align: middle;">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="white"/>
-                </svg>
-                Visit us on Facebook
-            </a>
-        </p>
     </footer>
 
     <a href="tel:5157769297" class="floating-call" aria-label="Call Now">
